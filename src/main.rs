@@ -170,9 +170,9 @@ impl<T: Scalar> Vector3<T> {
     }
 
     pub fn angle(&self, other: Self) -> f64 {
-        ((self.x.clone() * self.x.clone()
-            + self.y.clone() * self.y.clone()
-            + self.z.clone() * self.z.clone())
+        ((self.x.clone() * other.x.clone()
+            + self.y.clone() * other.y.clone()
+            + self.z.clone() * other.z.clone())
         .into()
             / (self.size() * other.size()))
         .acos()
